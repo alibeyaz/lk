@@ -1,10 +1,5 @@
-name: C/C++ CI
-
-on:
-  push:
-    branches: [ "BlackCLK_ex_2" ]
-  pull_request:
-    branches: [ "BlackCLK_ex_2" ]
+name: compile
+on: [workflow_dispatch]
 
 jobs:
   build:
@@ -18,7 +13,7 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: cLK (bin)
+        name: LK (bin)
         path: ./build-htcleo/lk.bin
     - uses: actions/upload-artifact@v3
       with:
